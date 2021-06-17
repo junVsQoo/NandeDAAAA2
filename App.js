@@ -10,7 +10,7 @@ class App extends React.Component {
 			expectedValue: '', //逆襲とフルチャージが未実装
 			SAttackBoost: '', SCounterstrike: '', SPeakPerformance: '', SResentment: '', SResuscitate: '',
 			SDragonheart: '1',
-			SCriticalEye: '', SWeaknessExploit: '', SMaximumMight: '', SLatentPower: '', SCriticalBoost: '',
+			SCriticalEye: '', SWeaknessExploit: '', SMaximumMight: '', SLatentPower: '', SCriticalBoost: '0.25',
 			SAgitator: '',
 			PowerCharm: '', Powertalon: '', Demondrug: '', MightSeed: '', DemonPowder: '', Spiribird: '',
 			Sharp: '1',
@@ -166,7 +166,7 @@ calculation() {
 					value={this.state.weaponAffinity} 
 					onChange={(e) => {this.setState({weaponAffinity: e.target.value})}}/>%
 				<br></br>
-				スキル：
+				攻撃力スキル：
 				<select 
 					value={this.state.SAttackBoost} 
 					onChange={(e) => {this.setState({SAttackBoost: e.target.value})}}>
@@ -205,6 +205,7 @@ calculation() {
 					<option	value="1.1">龍気活性LV5：×1.1</option>
 				</select>　
 				<br></br>
+				会心率スキル：
 				<select 
 					value={this.state.SCriticalEye} 
 					onChange={(e) => {this.setState({SCriticalEye: e.target.value})}}>
